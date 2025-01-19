@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revit Services Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>KN ESTUDIO │Revit & BIM</h1>
+        <h3>Explore nossos projetos destacados e serviços especializados em Revit..</h3>
+        <!-- Navegación -->
+        <nav>
+            <ul>
+                <li><a href="#revit">Revit</a></li>
+                <li><a href="renders.html">Renders</a></li> <!-- Enlace a la página de Renders -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Nueva sección de presentación -->
+    <section class="about-me">
+        <div class="about-photo">
+            <img src="/IMAGENES/WhatsApp Image 2023-06-09 at 22.43.05.jpeg" alt="Foto de [Tu Nombre]">
+        </div>
+        <div class="about-description">
+            <h2>Sobre mim</h2>
+            <p>Sou Gianfranco Nahuel, Maestro Mayor de Obras com 6 anos de formação na Argentina e mais de 5 anos de
+                experiência na área. No
+                final de 2019, decidi fundar a <b>KN ESTUDIO</b>, onde entregamos soluções técnicas inovadoras para a
+                redução
+                de erros, custos
+                e perda de tempo. A <b>KN ESTUDIO</b> oferece serviços de <b>modelagem em Revit</b> com
+                <b>metodologia BIM</b> e, ao mesmo
+                tempo, fornecemos
+                <b>soluções de renderização</b> para projetos residenciais, comerciais e corporativos.
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <!-- Sección Revit -->
+        <section class="portfolio" id="revit">
+            <article class="portfolio-item">
+                <img src="/IMAGENES/MODELS REVIT/1.jpeg" alt="Descripción del proyecto 1" class="portfolio-img">
+                <div class="description">
+                    <h2>Plantas Estruturais</h2>
+                    <p></p>
+                </div>
+            </article>
+
+            <article class="portfolio-item">
+                <img src="/IMAGENES/MODELS REVIT/2.png" alt="Descripción del proyecto 2" class="portfolio-img">
+                <div class="description">
+                    <h2>Plantas Hidráulicas</h2>
+                    <p></p>
+                </div>
+            </article>
+
+            <article class="portfolio-item">
+                <img src="/IMAGENES/MODELS REVIT/3.png" alt="Descripción del proyecto 2" class="portfolio-img">
+                <div class="description">
+                    <h2>Cortes Sanitarios</h2>
+                    <p></p>
+                </div>
+            </article>
+
+            <article class="portfolio-item">
+                <img src="/IMAGENES/MODELS REVIT/4.png" alt="Descripción del proyecto 2" class="portfolio-img">
+                <div class="description">
+                    <h2>Detalhamentos Técnicos</h2>
+                    <p></p>
+                </div>
+            </article>
+            <article class="portfolio-item">
+                <img src="/IMAGENES/MODELS REVIT/5.png" alt="Descripción del proyecto 2" class="portfolio-img">
+                <div class="description">
+                    <h2>Cortes Arquitetônicos</h2>
+                    <p>.</p>
+                </div>
+            </article>
+            <article class="portfolio-item">
+                <img src="/IMAGENES/MODELS REVIT/6.png" alt="Descripción del proyecto 2" class="portfolio-img">
+                <div class="description">
+                    <h2>Plantas Arquitetônicas</h2>
+                    <p></p>
+                </div>
+            </article>
+            <article class="portfolio-item">
+                <img src="/IMAGENES/MODELS REVIT/7.png" alt="Descripción del proyecto 2" class="portfolio-img">
+                <div class="description">
+                    <h2>Plantas Elétricas</h2>
+                    <p></p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="Imagen ampliada" id="lightbox-img">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 KN Estudio | Serviços BIM & Rendering</p>
+    </footer>
+
+    <script>
+        // Obtener todas las imágenes de la galería
+        const images = document.querySelectorAll('.portfolio-img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        // Función para mostrar la imagen en el lightbox
+        images.forEach(image => {
+            image.addEventListener('click', function () {
+                lightbox.classList.add('active');
+                lightboxImg.src = this.src;
+            });
+        });
+
+        // Cerrar el lightbox cuando se haga clic en él
+        lightbox.addEventListener('click', function () {
+            lightbox.classList.remove('active');
+        });
+
+        // Cerrar el lightbox con la tecla ESC
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') { // Si se presiona la tecla ESC
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
